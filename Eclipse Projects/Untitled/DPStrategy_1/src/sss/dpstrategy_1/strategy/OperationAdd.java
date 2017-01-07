@@ -1,8 +1,0 @@
-package sss.dpstrategy_1.strategy;
-
-public class OperationAdd implements Strategy{
-	@Override
-	public int doOperation(int num1, int num2) {
-		return num1 + num2;
-	}
-}
