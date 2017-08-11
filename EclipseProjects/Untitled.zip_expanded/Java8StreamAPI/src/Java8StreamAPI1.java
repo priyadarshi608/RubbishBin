@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.Map;
 
-public class Java8StreamAPI {
+public class Java8StreamAPI1 {
    public static void main(String args[]){
       System.out.println("Using Java 7: ");
 		
