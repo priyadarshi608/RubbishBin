@@ -1,0 +1,8 @@
+package com.q.alert.utils;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class HibernateUtilConfig {
+
+}

@@ -1,0 +1,16 @@
+package com.q.alert.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.q.alert.entities.Employee;
+
+/**
+ * @author shubham
+ * 
+ * This is basically the DAO layer in case of using JpaRepository.
+ * JpaRepository have boilerplate codes already implemented and we don't
+ * need to right that.
+ */
+public interface EmployeeRepository extends JpaRepository<Employee, Long>{
+	
+}

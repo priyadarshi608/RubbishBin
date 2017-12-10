@@ -1,0 +1,18 @@
+package com.q.alert;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.q.alert.dao.EmployeeDao;
+
+@SpringBootApplication
+public class AlertApplication {
+
+	@Autowired
+	private EmployeeDao employeeDao;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(AlertApplication.class, args);
+	}
+}

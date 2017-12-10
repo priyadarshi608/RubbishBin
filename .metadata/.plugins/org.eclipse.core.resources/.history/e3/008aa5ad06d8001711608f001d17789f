@@ -1,0 +1,5 @@
+package com.q.alert.utils;
+
+public class HibernateUtilConfig {
+
+}

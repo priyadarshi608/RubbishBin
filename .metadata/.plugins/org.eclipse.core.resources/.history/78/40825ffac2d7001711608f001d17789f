@@ -1,0 +1,22 @@
+package com.q.alert.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.q.alert.entities.Employee;
+
+@Repository
+public class EmployeeDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public void createEmployee(Employee employee) {
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

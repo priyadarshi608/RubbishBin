@@ -1,0 +1,5 @@
+package com.q.alert.repository;
+
+public class EmployeeRepository {
+
+}

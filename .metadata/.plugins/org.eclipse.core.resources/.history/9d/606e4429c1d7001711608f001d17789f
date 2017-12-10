@@ -1,0 +1,30 @@
+package com.q.alert.entities;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
+@Table(name="employee_table")
+public class Employee {
+
+	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer Id;
+	
+	@Column(name="name")
+	private String name;
+	
+	@Column(name="date_of_joining")
+	private Date doj;
+	
+	@Column(name="salary")
+	private Double salary;
+	
+}

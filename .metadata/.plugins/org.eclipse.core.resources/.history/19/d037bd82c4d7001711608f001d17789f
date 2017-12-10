@@ -1,0 +1,31 @@
+package com.q.alert;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.q.alert.dao.EmployeeDao;
+import com.q.alert.entities.Employee;
+
+@SpringBootApplication
+public class AlertApplication implements CommandLineRunner {
+
+	@Autowired
+	private EmployeeDao employeeDao;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(AlertApplication.class, args);
+	}
+
+	@Override
+	public void run(String... arg0) throws Exception {
+		Employee employee = getEmployee();
+		employeeDao.createEmployee(employee);
+	}
+
+	private Employee getEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

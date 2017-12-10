@@ -1,0 +1,21 @@
+package com.q.alert.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.q.alert.dao.EmployeeDao;
+import com.q.alert.entities.Employee;
+
+@RestController
+@RequestMapping(value = "/jpa/employees")
+public class JpaEmployeeController {
+
+//	@GetMapping(value = "/all")
+//	public List<Employee> getAll() {
+//	}
+	
+}

@@ -1,0 +1,70 @@
+package com.q.alert.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.q.alert.entities.Employee;
+import com.q.alert.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService {
+	
+	@Autowired
+	EmployeeRepository employeeRepository;
+	
+	public Employee get(Long id) {
+		return employeeRepository.findOne(id);
+	}
+
+	public List<Employee> getAll() {
+		return employeeRepository.findAll();
+	}
+
+//	public List<Employee> upsert(Employee employee) {
+//		employeeRepository.save(employee);
+//		return employeeRepository.findAll();
+//	}
+//	
+	public List<Employee> create(Employee employee) {
+		Long id = employee.getId();
+		if (id == null) {
+			employeeRepository.save(employee);
+		} else {
+			Employee employeeEntry = employeeRepository.findOne(id);
+			if (employeeEntry == null)
+				employeeRepository.save(employee);
+			else
+				System.out.println("Employee already exist.");
+		}
+		return employeeRepository.findAll();
+	}
+	
+	public Employee update(Long id, Employee employee) {
+		Employee employeeToUpdate = employeeRepository.findOne(id);
+		if (employeeToUpdate == null)
+			System.out.println("Employee don't exist.");
+		else {
+			
+			Double employeeSalary = employee.getSalary();
+			if (employeeSalary == null)
+				employeeToUpdate.setSalary(employee.getSalary());
+			
+			employeeRepository.save(employee);
+		}
+
+		return employeeRepository.findAll();
+	}
+
+	public void delete(Long id) {
+		employeeRepository.delete(id);
+	}
+	
+}

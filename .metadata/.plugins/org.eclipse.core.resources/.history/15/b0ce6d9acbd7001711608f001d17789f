@@ -1,0 +1,5 @@
+package com.q.alert.jpa_repository;
+
+public class EmployeeRepository {
+
+}
