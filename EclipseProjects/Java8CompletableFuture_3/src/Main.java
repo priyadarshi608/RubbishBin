@@ -52,8 +52,8 @@ public class Main {
 		//System.out.println(findPrices1("myPhone"));
 		//System.out.println(findPrices2("myPhone"));
 		//System.out.println(findPrices3("myPhone"));
-		System.out.println(findPrices4("myPhone"));
-		//System.out.println(findPrices5("myPhone"));
+		//System.out.println(findPrices4("myPhone"));
+		System.out.println(findPrices5("myPhone"));
 
 		long duration = (System.nanoTime() - start) / 1_000_000;
 		System.out.println("Done in " + duration + " msecs");
