@@ -9,10 +9,12 @@ public class Stock {
 		this.stockName = name;
 		this.quantity = quantity;
 	}
+	
 	public void buy(){
 		System.out.println("Stock [ Name: "+stockName+
 				", Quantity: " + quantity +" ] bought");
 	}
+	
 	public void sell(){
 		System.out.println("Stock [ Name: "+stockName+
 				", Quantity: " + quantity +" ] sold");

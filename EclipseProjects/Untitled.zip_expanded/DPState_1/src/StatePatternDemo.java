@@ -7,12 +7,12 @@ public class StatePatternDemo {
       Context context = new Context();
 
       StartState startState = new StartState();
-      startState.doAction(context);
+      startState.setInContext(context);
 
       System.out.println(context.getState().toString());
 
       StopState stopState = new StopState();
-      stopState.doAction(context);
+      stopState.setInContext(context);
 
       System.out.println(context.getState().toString());
    }
