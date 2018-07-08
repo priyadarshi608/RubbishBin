@@ -12,4 +12,5 @@ public class SellStockOrder implements Order {
 	public void execute() {
 		stock.sell();
 	}
+	
 }

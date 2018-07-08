@@ -1,6 +1,6 @@
 package sss.dpfactory.shape;
 
-public class Circle implements Shape {
+class Circle implements Shape {
 
 	/**
 	 * This constructor has default access specifier so it won't be visible

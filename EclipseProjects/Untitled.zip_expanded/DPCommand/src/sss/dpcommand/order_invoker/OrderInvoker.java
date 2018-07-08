@@ -9,7 +9,7 @@ public class OrderInvoker {
 	private List<Order> orderList = new ArrayList<Order>(); 
 
 	public void takeOrder(Order order){
-		orderList.add(order);		
+		orderList.add(order);
 	}
 
 	public void placeOrders(){

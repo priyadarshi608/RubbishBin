@@ -3,17 +3,17 @@ package sss.dpfactory.shape;
 public class ShapeFactory {
 
 	//use getShape method to get object of type shape 
-	public Shape getShape(String shapeType){
-		if(shapeType == null){
-			return null;
-		}		
-		if(shapeType.equalsIgnoreCase("CIRCLE")){
+	public Shape getShape(TypeOfShape typeOfShape){
+//		if(shapeType == null){
+//			return null;
+//		}		
+		if(typeOfShape == TypeOfShape.CIRCLE){
 			return new Circle();
 
-		} else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+		} else if(typeOfShape == TypeOfShape.RECTANGLE){
 			return new Rectangle();
 
-		} else if(shapeType.equalsIgnoreCase("SQUARE")){
+		} else if(typeOfShape == TypeOfShape.SQUARE){
 			return new Square();
 		}
 

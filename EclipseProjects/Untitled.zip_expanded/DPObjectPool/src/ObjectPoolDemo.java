@@ -28,13 +28,13 @@ public class ObjectPoolDemo{
               These boundaries are ignored then. 
 		*/
 		
-		// pool = new ObjectPoolImpl<Process>(4, 10, 5)  
-		pool = new ObjectPoolImpl<Process>(4) {
+		pool = new ObjectPoolImpl<Process>(4, 4, 1) {
+		// pool = new ObjectPoolImpl<Process>(4) {
 			protected Process createObject()  
 			{  
 				// create a test object which takes some time for creation  
 				return new Process(processNo.incrementAndGet());  
-			}  
+			}
 		};  
 	}
 	public void tearDown() {  
@@ -54,13 +54,16 @@ public class ObjectPoolDemo{
 		executor.execute(new TaskHavingProcess(pool, 4));
 		executor.execute(new TaskHavingProcess(pool, 5));  
 		try {
-			Thread.sleep(200);
+			Thread.sleep(1500);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
 		executor.execute(new TaskHavingProcess(pool, 6));  
 		executor.execute(new TaskHavingProcess(pool, 7));  
 		executor.execute(new TaskHavingProcess(pool, 8));  
+		executor.execute(new TaskHavingProcess(pool, 9));  
+		executor.execute(new TaskHavingProcess(pool, 10));  
+		executor.execute(new TaskHavingProcess(pool, 11));  
 
 		executor.shutdown();
 		try {  
@@ -72,7 +75,7 @@ public class ObjectPoolDemo{
 	public static void main(String args[])  {   
 		ObjectPoolDemo op=new ObjectPoolDemo();  
 		op.setUp();
-		op.tearDown();  
 		op.testObjectPool();  
+		op.tearDown();  
 	}   
 }

@@ -13,6 +13,6 @@ public class OctalObserver extends Observer{
 	public void update() {
 		System.out.println("New update available...");
 		System.out.println("Ignoring the update.");
-		// System.out.println( "Octal String: " + Integer.toOctalString( subject.getState() ) ); 
+		System.out.println( "Octal String: " + Integer.toOctalString( subject.getState() ) ); 
 	}
 }
